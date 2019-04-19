@@ -32,3 +32,9 @@ Route::get('jumlah/{satu}/{dua}', function ($satu,$dua){
 Route::get('/mahasiswa', 'MahasiswaController@index');
 Route::get('/mahasiswa/form', 'MahasiswaController@form');
 Route::post('/mahasiswa/simpan', 'MahasiswaController@simpan');
+Route::get('dosen', 'DosenController@index');
+Route::get('dosen/tambah', 'DosenController@tambah');
+Route::get('dosen/edit/{id}', 'DosenController@edit');
+Route::post('dosen/simpan', 'DosenController@simpandata');
+Route::post('dosen/ubahdata', 'DosenController@ubahdata');
+Route::get('dosen/hapus/{id}', 'DosenController@hapusdata');
