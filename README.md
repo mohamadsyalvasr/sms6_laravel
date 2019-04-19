@@ -1,1 +1,1 @@
-# sms6_laravel
+# HANYA UNTUK LATIHAN DAN TUGAS
