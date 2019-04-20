@@ -74,4 +74,41 @@ class DosenController extends Controller
         return redirect('/dosen');
     }
 
+    public function tampildata(Request $request){
+        // menangkap data pencarian
+        $cari = $request->cari;
+
+        /*
+    	*! mengambil data dari table dosen sesuai pencarian data
+		$dosen = \DB::table('dosen')
+		->where('nidn',$cari)
+        ->get();
+
+        *! mengambil data awalan tertentu
+        $dosen= \DB::table('dosen')
+        ->where('namadosen', 'like', 'A%')
+        ->get();
+
+        *! mengambil data pasti
+        $dosen= \DB::table('dosen')
+		->where('alamat','Jakarta')
+        ->get();
+
+        *! mengambil data beberapa kondisi
+        $dosen= \DB::table('dosen')->where([
+            ['alamat', '=', 'Bandung'],
+            ['namadosen', 'like', 'B%'],
+        ])->get();
+
+        */
+
+        $datadosen=array(
+            'judul' => 'Data Dosen',
+            'dosen' => $dosen
+        );
+
+    		// mengirim data pegawai ke view index
+		return view('dosen.satu', $datadosen);
+    }
+
 }

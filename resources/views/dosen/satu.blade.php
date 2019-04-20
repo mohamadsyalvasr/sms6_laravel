@@ -7,13 +7,9 @@
     <title>{{$judul}}</title>
 </head>
 <body>
+
     <h3>{{$judul}}</h3>
-    <form action="/dosen/satu" method="GET">
-		<input type="text" name="cari" placeholder="Cari nidn .." value="{{ old('cari') }}">
-		<input type="submit" value="CARI">
-	</form>
-    <a href="/dosen/tambah">+ Tambah Dosen Baru</a>
-    <br><br>
+    <a href="/dosen">Kembali</a>
     <table border="1">
         <tr>
             <th>Nama</th>
@@ -40,7 +36,5 @@
                 </tr>
         @endif
     </table>
-
-    {{-- Jumlah Data : {{ $dosen->total() }} --}}
 </body>
 </html>

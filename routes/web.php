@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 Route::get('belajar', function () {
-    return 'SELAMAT MENIKMATI SORE {>.<}';
+    return 'SELAMAT MENIKMATI SORE {[>.<]}';
 });
 
 Route::get('tampil/{aku}', function ($aku) {
@@ -38,3 +38,4 @@ Route::get('dosen/edit/{id}', 'DosenController@edit');
 Route::post('dosen/simpan', 'DosenController@simpandata');
 Route::post('dosen/ubahdata', 'DosenController@ubahdata');
 Route::get('dosen/hapus/{id}', 'DosenController@hapusdata');
+Route::get('dosen/satu', 'DosenController@tampildata');
