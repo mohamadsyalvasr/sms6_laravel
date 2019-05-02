@@ -18,6 +18,8 @@ class CreateTableDosen extends Migration
             $table->string('nidn',7)->unique();
             $table->string('namadosen',50);
             $table->text('alamat');
+            $table->text('nama_foto', 50);
+            $table->text('folder', 50);
             $table->text('_token');
             $table->timestamps();
         });

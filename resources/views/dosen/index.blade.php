@@ -16,6 +16,7 @@
     <br><br>
     <table border="1">
         <tr>
+            <th>Foto</th>
             <th>Nama</th>
             <th>NIDN</th>
             <th>Alamat</th>
@@ -24,6 +25,7 @@
         @if ($dosen!=null)
             @foreach ($dosen as $p)
                 <tr>
+                    <td><img src="{{ asset('storage/images/'.$p->nama_foto)}}" alt="" height="42" width="42"></td>
                     <td>{{$p->namadosen}}</td>
                     <td>{{$p->nidn}}</td>
                     <td>{{$p->alamat}}</td>

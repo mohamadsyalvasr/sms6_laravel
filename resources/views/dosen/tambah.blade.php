@@ -9,11 +9,12 @@
 <body>
     <h3>{{$judul}}</h3>
     <a href="/dosen">Kembali</a><br><br>
-    <form action="/dosen/simpan" method="POST">
+    <form action="/dosen/simpan" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
         Nama <input type="text" name="namadosen" required><br>
         NIDN <input type="text" name="nidn" required><br>
-        Alamat <textarea name="alamat" id="" cols="30" rows="10"></textarea>
+        Alamat <textarea name="alamat" id="" cols="30" rows="10"></textarea><br>
+        Gambar <input type="file" required name="image"><br><br>
         <input type="submit" value="Simpan Data">
     </form>
 </body>
