@@ -20,6 +20,11 @@ class DosenController extends Controller
         $this->folder = 'images';
     }
 
+    public function indexandroid(){
+        $data = json_encode(\DB::table('dosen')->get());
+        echo "{\"data\":".$data."}";
+    }
+
     public function index(){
         //! mengambil data dari table dosen
         //! select * from dosen
