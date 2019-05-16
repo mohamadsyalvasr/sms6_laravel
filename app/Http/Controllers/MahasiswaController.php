@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Excel;
+use App\Exports\MahasiswaReport;
 
 class MahasiswaController extends Controller
 {
@@ -24,5 +26,11 @@ class MahasiswaController extends Controller
         $data = $request->all();
         $store = \App\Mahasiswa::insert($data);
         return redirect()->back()->with('success');
+    }
+
+
+    public function laporanExcel()
+    {
+        return (new MahasiswaReport)->download('Mahasiswa.xlsx');
     }
 }

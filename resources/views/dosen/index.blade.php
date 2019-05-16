@@ -12,7 +12,7 @@
 		<input type="text" name="cari" placeholder="Cari nidn .." value="{{ old('cari') }}">
 		<input type="submit" value="CARI">
 	</form>
-    <a href="/dosen/tambah">+ Tambah Dosen Baru</a>
+    <a href="/dosen/tambah">+ Tambah Dosen Baru</a> | <a href="dosen/print">Print Data</a>
     <br><br>
     <table border="1">
         <tr>

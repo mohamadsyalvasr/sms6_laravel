@@ -173,5 +173,4 @@ class DosenController extends Controller
 
         return view('pages.print', $datadosen);
     }
-
 }

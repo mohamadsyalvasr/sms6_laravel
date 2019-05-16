@@ -39,3 +39,5 @@ Route::post('dosen/simpan', 'DosenController@simpandata');
 Route::post('dosen/ubahdata', 'DosenController@ubahdata');
 Route::get('dosen/hapus/{id}', 'DosenController@hapusdata');
 Route::get('dosen/satu', 'DosenController@tampildata');
+Route::get('dosen/print', 'DosenController@cetakpdf');
+Route::get('/excel', 'MahasiswaController@laporanExcel');
