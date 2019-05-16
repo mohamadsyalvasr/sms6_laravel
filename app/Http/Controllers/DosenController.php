@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Response;
 use Carbon\Carbon;
 use Intervention\Image\Facades\Image as Image;
 use Illuminate\Support\Facades\File;
+use Fpdf;
 
 class DosenController extends Controller
 {
@@ -160,6 +161,17 @@ class DosenController extends Controller
 
     		// mengirim data pegawai ke view index
 		return view('dosen.satu', $datadosen);
+    }
+
+    public function cetakpdf(){
+        $dosen = \DB::table('dosen')->get();
+
+        $datadosen=array(
+            'judul' => 'Data Dosen',
+            'dosen' => $dosen
+        );
+
+        return view('pages.print', $datadosen);
     }
 
 }
